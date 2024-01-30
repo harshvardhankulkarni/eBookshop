@@ -38,7 +38,7 @@ class Book(models.Model):
     title = models.CharField(null=False, max_length=255)
     edition = models.IntegerField(max_length=2, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
-    image = models.ImageField(upload_to='bookImages', null=True, blank=True)
+    image = models.ImageField(upload_to='books', null=True, blank=True)
     price = models.DecimalField(decimal_places=2, null=False, max_digits=5)
     discount = models.IntegerField(max_length=2, default=10)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
